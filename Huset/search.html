@@ -8,11 +8,30 @@
 </head>
 
 <body>
-
    <div class="body-text"> 
-   
 <h1>Discover what Huset has to offer</h1>
 </div>
+   
+    <h1>Search events</h1>
+
+    <form action="search.html">
+        <input name="search" type="search">
+        <input type="submit" value="search">
+    </form>
+    <nav>
+        <a href="index.html">All</a>
+    </nav>
+    
+        <section id="posts"></section>
+    <template class="eventTemplate">
+        <article>
+            <header>
+                <a href="sub.html?id=51">
+                    <h1 class="eventTitle"></h1>
+                </a>
+                <img src="" alt="" class="cover">
+            </header>
+    
     <template>
         <article>
            
@@ -34,9 +53,9 @@
 <div class="footer"> 
 
  <ul class="nav-ul">
-               
-                <li><a href="test.html">Explore</a></li>
-                <li><a href="events.html">Events</a></li>
+               <ul>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Events</a></li>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="#">Volunteer</a></li>
                 <li><a href="#">About</a></li>
@@ -44,7 +63,7 @@
 
 </div>
 
-<script src="script.js"></script>
+<script src="search.js"></script>
 </body>
 
 </html>

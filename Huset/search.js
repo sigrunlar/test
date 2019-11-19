@@ -1,18 +1,27 @@
-fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event")
-    .then(res=>res.json())
-    .then(function(data){
-    //data.forEach(buildCategory)
-    data.forEach(showEvent)
-})
+window.addEventListener("DOMContentLoaded", getData);
 
-function buildCategory(data){
-    /*const section = document.createElement("section");
-    const header = document.createElement("h1");
-    header.textContent=data;
-    section.appendChild(header);
-    document.querySelector("body").appendChild(section);
-    console.log(data)*/
+function getData(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const search = urlParams.get("search");
+    //console.log("getData")
+    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/event?_embed&search="+search)
+    .then(res=>res.json())
+    .then(handleData)
+    
+function getNavigation(){
+    fetch("https://janstevica.dk/KEA/2SEM/database/wp-json/wp/v2/categories?per_page=100")
+    .then(res=>res.json())
+    .then(data=>{
+        data.forEach(addLink)
+    })
 }
+    
+function handleData(myData){
+    console.log("myData")
+    // 1 loop
+    myData.forEach(showEvent)
+}
+
           
 
 function showEvent(event) {
@@ -37,9 +46,8 @@ function showEvent(event) {
     
     
 	
-    document.querySelector(".eventList").appendChild(copy);
+    document.querySelector(".eventList").appendChild(copy)
     
-}
 
 
-   // document.querySelector(".eventList").appendChild(copy);
+
