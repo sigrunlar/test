@@ -1,0 +1,77 @@
+body{
+    background-color: #212C3A;
+     background-repeat: no-repeat;
+  background-attachment: fixed;
+    text-decoration: none;
+     font-family: Avenir Next;
+    color: #FFFFFF;
+     display:flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+
+
+.footer {
+    display:flex;
+   position: fixed;
+    align-items: center;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #151D26;
+   color: white;
+   text-align: center;
+    border-top-color: white;
+    text-align: center;
+
+
+   
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: Avenir Next;
+    list-style-type: none;
+    
+}
+
+li {
+    display: inline;
+    margin: 2px;
+    text-align: center;
+    
+}
+
+img {
+    max-width: 300px;
+    
+}
+
+.cardTemplate {
+    background-color: #151D26;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-style: outset;
+    border-radius: 5px;
+    border-color: #181E26;
+    
+
+}
+
+.body-image {
+    align-items: center;
+   
+}
+
+.body-text {
+    
+    padding: 100px;
+    text-align: center;
+    background-color: #151D26;
+ 
+}
